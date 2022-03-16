@@ -30,6 +30,7 @@ class Stack {
   }
 }
 
+//Use 'node stackMethods.js' to run the example below
 const test = new Stack();
 console.log({ 'Initial Array': valArray });
 console.log({ 'Testing push': test.pushToStack(1) }, { 'New Array': valArray });
