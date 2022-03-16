@@ -9,6 +9,15 @@ class LinkedList {
   constructor(head = null) {
     this.head = head;
   }
+  size() {
+    let count = 0;
+    let node = this.head;
+    while (node) {
+      count++;
+      node = node.next;
+    }
+    return count;
+  }
 }
 
 let nodeA1 = new ListNode(3);
@@ -31,5 +40,5 @@ let listB = new LinkedList(nodeB1);
 
 console.log(listA);
 console.log({ 'Testing A': listA.head.next.next.data });
-console.log(listB);
+console.log(listB.size());
 console.log({ 'Testing B': listB.head.next.next.data });
