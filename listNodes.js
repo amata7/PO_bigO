@@ -38,8 +38,12 @@ nodeB3.next = nodeB4;
 
 let listA = new LinkedList(nodeA1);
 let listB = new LinkedList(nodeB1);
+let combinedSize = listA.size() + listB.size();
 
-console.log(listA);
-console.log({ 'Testing A': listA.head.next.next.data });
-console.log(listB.size());
-console.log({ 'Testing B': listB.head.next.next.data });
+function findIntersectingNode(combinedSize) {
+  console.log({ A: listA });
+  console.log({ B: listB });
+  console.log(combinedSize);
+}
+
+findIntersectingNode(combinedSize);
