@@ -1,11 +1,17 @@
-let valArray = [1];
+let valArray = [1, 2, 3];
 
 class Stack {
   constructor(val) {
     this.val = val;
   }
+  get pop() {
+    return this.popFromStack();
+  }
   get max() {
     return this.maxFromStack();
+  }
+  popFromStack() {
+    return valArray.pop();
   }
   maxFromStack() {
     if (valArray.length === 0) {
@@ -19,4 +25,11 @@ class Stack {
 }
 
 const newStack = new Stack();
-console.log({ 'Get Max Function': newStack.max });
+console.log({ Array: valArray });
+
+console.log(
+  { 'Get Pop Function': newStack.pop },
+  { 'Get Max Function': newStack.max }
+);
+
+console.log({ Array: valArray });
