@@ -4,14 +4,12 @@ class Stack {
   constructor(val) {
     this.val = val;
   }
-  get pop() {
-    return this.popFromStack();
-  }
-  get max() {
-    return this.maxFromStack();
-  }
   popFromStack() {
-    return valArray.pop();
+    if (valArray.length === 0) {
+      throw new Error('No values inside of array.');
+    } else {
+      return valArray.pop();
+    }
   }
   maxFromStack() {
     if (valArray.length === 0) {
@@ -28,7 +26,7 @@ const newStack = new Stack();
 console.log({ Array: valArray });
 
 console.log(
-  { 'Get Pop Function': newStack.pop },
+  { 'Get Pop Function': newStack.popFromStack() },
   { 'Get Max Function': newStack.max }
 );
 
