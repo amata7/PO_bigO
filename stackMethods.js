@@ -1,8 +1,15 @@
-let valArray = [1, 2, 3];
+let valArray = [1, 2, 3, 7, 1, 1, 6, 2];
 
 class Stack {
   constructor(val) {
     this.val = val;
+  }
+  pushToStack(val) {
+    if (val === undefined) {
+      throw new Error('Missing parameter to push');
+    } else {
+      return valArray[valArray.push(val) - 1];
+    }
   }
   popFromStack() {
     if (valArray.length === 0) {
@@ -21,13 +28,3 @@ class Stack {
     }
   }
 }
-
-const newStack = new Stack();
-console.log({ Array: valArray });
-
-console.log(
-  { 'Get Pop Function': newStack.popFromStack() },
-  { 'Get Max Function': newStack.max }
-);
-
-console.log({ Array: valArray });
