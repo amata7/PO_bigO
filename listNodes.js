@@ -22,20 +22,21 @@ class LinkedList {
 
 let nodeA1 = new ListNode(3);
 let nodeA2 = new ListNode(7);
-nodeA1.next = nodeA2;
 let nodeA3 = new ListNode(8);
-nodeA2.next = nodeA3;
 let nodeA4 = new ListNode(10);
+nodeA1.next = nodeA2;
+nodeA2.next = nodeA3;
 nodeA3.next = nodeA4;
-let listA = new LinkedList(nodeA1);
 
 let nodeB1 = new ListNode(99);
 let nodeB2 = new ListNode(1);
-nodeB1.next = nodeB2;
 let nodeB3 = new ListNode(8);
-nodeB2.next = nodeB3;
 let nodeB4 = new ListNode(10);
+nodeB1.next = nodeB2;
+nodeB2.next = nodeB3;
 nodeB3.next = nodeB4;
+
+let listA = new LinkedList(nodeA1);
 let listB = new LinkedList(nodeB1);
 
 console.log(listA);
