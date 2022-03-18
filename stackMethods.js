@@ -29,37 +29,54 @@ class Stack {
   }
 }
 
-//Use 'node stackMethods.js' to run the example below
-const test = new Stack();
-console.log({ 'Initial Array': valArray });
-console.log({ 'Testing push': test.pushToStack(1) }, { 'New Array': valArray });
-console.log({ 'Testing push': test.pushToStack(2) }, { 'New Array': valArray });
-console.log({ 'Testing push': test.pushToStack(7) }, { 'New Array': valArray });
-console.log({ 'Testing max': test.maxFromStack() });
-console.log(
-  { 'Testing push': test.pushToStack(457) },
-  { 'New Array': valArray }
-);
-console.log({ 'Testing max': test.maxFromStack() });
-console.log(
-  { 'Testing pop': test.popFromStack() },
-  { 'Popped Array': valArray }
-);
-console.log({ 'Testing max': test.maxFromStack() });
-console.log(
-  { 'Testing pop': test.popFromStack() },
-  { 'Popped Array': valArray }
-);
-console.log({ 'Testing max': test.maxFromStack() });
-console.log(
-  { 'Testing pop': test.popFromStack() },
-  { 'Popped Array': valArray }
-);
-console.log({ 'Testing max': test.maxFromStack() });
-console.log(
-  { 'Testing pop': test.popFromStack() },
-  { 'Popped Array': valArray }
-);
-// Uncomment below console logs to test error handling of the max or pop functions one at a time
-// console.log({ 'Testing max': test.maxFromStack() });
-// console.log({ 'Testing pop': test.popFromStack() }, { 'Popped Array': valArray });
+//Uncomment the following line and use 'node stackMethods.js' to run the example below
+// runTest();
+function runTest() {
+  const test = new Stack();
+  console.log({ 'Initial Array': valArray });
+  console.log(
+    { 'Pushed Value': test.pushToStack(1) },
+    { 'New Array': valArray }
+  );
+  console.log(
+    { 'Pushed Value': test.pushToStack(2) },
+    { 'New Array': valArray }
+  );
+  console.log(
+    { 'Pushed Value': test.pushToStack(7) },
+    { 'New Array': valArray }
+  );
+  console.log({ 'Max Value': test.maxFromStack() });
+  console.log('\n');
+  console.log(
+    { 'Pushed Value': test.pushToStack(457) },
+    { 'New Array': valArray }
+  );
+  console.log({ 'Max Value': test.maxFromStack() });
+  console.log('\n');
+  console.log(
+    { 'Popped Value': test.popFromStack() },
+    { 'Popped Array': valArray }
+  );
+  console.log({ 'Max Value': test.maxFromStack() });
+  console.log('\n');
+  console.log(
+    { 'Popped Value': test.popFromStack() },
+    { 'Popped Array': valArray }
+  );
+  console.log({ 'Max Value': test.maxFromStack() });
+  console.log('\n');
+  console.log(
+    { 'Popped Value': test.popFromStack() },
+    { 'Popped Array': valArray }
+  );
+  console.log({ 'Max Value': test.maxFromStack() });
+
+  console.log(
+    { 'Popped Value': test.popFromStack() },
+    { 'Popped Array': valArray }
+  );
+  // Uncomment below console logs to test error handling of the max or pop functions one at a time
+  // console.log({ 'Max Value': test.maxFromStack() });
+  // console.log({ 'Popped Value': test.popFromStack() }, { 'Popped Array': valArray });
+}
