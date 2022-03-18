@@ -4,7 +4,6 @@ class Stack {
   constructor(val) {
     this.val = val;
   }
-  static valArray = [];
   pushToStack(val) {
     if (val === undefined) {
       throw new Error('Missing parameter to push');
